@@ -33,6 +33,17 @@
       <br>
       <h2>Cart</h2>
       <br>
+      <ul>
+        <li ng-repeat="item in cartItems">
+          <p>
+            {{item.title}}
+            <br>
+            {{item.price}}
+          </p>
+          <button ng-click="removeCamera(item)">Remove Item</button>
+        </li>
+      </ul>
+      <br>
       <p>
         Sub Total: {{subTotal | currency}}
       </p>

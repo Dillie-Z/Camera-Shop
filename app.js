@@ -32,6 +32,12 @@ app.controller("CameraController", function($scope, $rootScope, $log) {
         updateSubTotal();
     }
 
+    $scope.removeCamera = function(item){
+      var index = $scope.cartItems.indexOf(item);
+      $scope.cartItems.splice(index,1);
+      updateSubTotal()
+    }
+
     updateSubTotal = function() {
         var subSum = 0;
         for (var i = 0; i < $scope.cartItems.length; i++) {
